@@ -1,5 +1,5 @@
 class ShameMailer < ActionMailer::Base
-  default from: "\"Bizden Söylemesi\" <info@bizdensoylemesi.com>"
+  default from: "\"Bizden Söylemesi\" <elci@nasilsoylesem.com>"
   
   def shame_mail(email, shame, choice)
     @email = email

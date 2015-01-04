@@ -3,13 +3,14 @@
 <p>Birinden hoşlanıyor musun, nefret mi ediyorsun? Biri ter mi kokuyor? Yoksa yemek yerken ağzını mı şapırdatıyor? Haykırmak istiyorsun, ama utanıyor musun? Artık bunu yüzüne söylemenin bir yolu var...</p>
 <p><strong>Hem de tamamen anonim olarak!</strong></p>
 
-<div style="margin-top: 50px;">
-  <%= form_tag "/shame_pages/create" do %>
-  <p><%= select_tag "shame", options_for_select(["Senden hoşlanıyorum, hem de deli gibi", "Senden resmen nefret ediyorum", "Leş gibi ter kokuyorsun, söyleyemiyorum", "Ağzın kokuyor, yanında durmaya dayanamıyorum", "Bana borcunu ne zaman ödeyeceksin?", "O saç rengi sana yakışmış mi hiç?"]) %></p>
-  <p><%= select_tag "choice", options_for_select(["Ekleyecek bir şeyim yok, bu ona yeter", "Five if you counted Vincente but he had lost his hand when a grenade", "German soldiers on the road and the idea was to aim at the first group"]) %></p>
-  <p><%= text_field_tag "email", "serkmutlu@gmail.com", size: 35 %></p>
-  <p><%= submit_tag "Gönder!" %></p>
-<% end %>
+<div style="margin-top:50px;">
+  <%= form_for @choices, :url => shame_pages_create_path do |f| %>
+  <p><%= f.select :shame, options_for_select(["Senden hoşlanıyorum, hem de deli gibi", "Senden resmen nefret ediyorum", "Leş gibi ter kokuyorsun, söyleyemiyorum", "Ağzın kokuyor, yanında durmaya dayanamıyorum", "Bana borcunu ne zaman ödeyeceksin?", "O saç rengi sana yakışmış mi hiç?"]) %></p>
+  <p><%= f.select :choice, options_for_select(["Ekleyecek bir şeyim yok, bu ona yeter", "Five if you counted Vincente but he had lost his hand when a grenade", "German soldiers on the road and the idea was to aim at the first group"]) %></p>
+  <p><%= f.text_field :email, size: 35 %></p>
+  <p><%= f.submit "Gönder!" %></p>
+  <% end %>
 </div>
+  
   
 </div>
