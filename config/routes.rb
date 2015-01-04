@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'shame_pages/new'
   get 'shame_pages/create'
   post 'shame_pages/create'
-  resources :choices
+  # resources :choices
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

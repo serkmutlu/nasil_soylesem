@@ -4,8 +4,12 @@ class ShamePagesController < ApplicationController
   end
 
   def create
-    @choices = Choice.create(choice_params)
-    ShameMailer.shame_mail(params[:choice][:email], params[:choice][:shame], params[:choice][:choice]).deliver
+    if params[:choice]
+      @choices = Choice.create(choice_params)
+      ShameMailer.shame_mail(params[:choice][:email], params[:choice][:shame], params[:choice][:choice]).deliver
+    else
+      redirect_to root_path
+    end
   end
   
   private
