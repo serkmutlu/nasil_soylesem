@@ -13,6 +13,9 @@ class ShamePagesController < ApplicationController
     end
   end
   
+  def about
+  end
+  
   private
   def choice_params
     params.require(:choice).permit(:email, :shame, :choice)

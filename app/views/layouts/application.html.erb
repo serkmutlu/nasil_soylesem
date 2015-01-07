@@ -10,30 +10,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="top-header">
-    <div class="wrapper">
-        <a class="logo" href="/">
-          <%= link_to(image_tag("logo.gif"), root_path, size: "210x110") %>
-        </a>
-        <ul class="right-menu">
-            <li>
-                <a href="">Menu 1</a>
-            </li>
-            <li>
-                <a href="">Menu 2</a>
-            </li>
-            <li>
-                <a href="">Menu 3</a>
-            </li>
-        </ul>
-    </div><!-- .wrapper -->
-   </header>
-
-<%= yield %>
+  <%= render 'header' %>
+  
+  <%= yield %>
 
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-  
+<%= javascript_include_tag 'app' %>
+ 
 </body>
 </html>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'shame_pages#new'
   get 'shame_pages/new'
   get 'shame_pages/create'
+  get 'shame_pages/about'
   post 'shame_pages/create'
   # resources :choices
 
