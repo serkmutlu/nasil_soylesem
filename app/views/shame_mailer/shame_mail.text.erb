@@ -5,10 +5,13 @@ Bir arkadaşın sana bir itirafını gönderdi!
 
 <%= @shame %>
 
+<% unless @choice == "" || @choice.nil? %>
 şöyle de bir eki var:
 
 <%= @choice %>
- 
+
+<% end %>
+
 Sen de itirafta bulunmak istersen: http://nasilsoylesem.com
 
 - - - -
