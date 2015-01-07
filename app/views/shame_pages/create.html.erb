@@ -1,2 +1,8 @@
-<h1>Bravo amk, gönderdin!</h1>
-  <p>Şimdi <%= link_to "geri git", root_path %></p>
+<h1>Gizli kapaklı işler gerçekleşti</h1>
+  <div class="wrapper content">
+    <div class="success-wrap">
+        <i class="flaticon-check"></i>
+      <p><%= @email %> e-posta adresli kullanıcıya itirafınızı içeren anonim bir e-posta yolladık.<br>Ne diyelim, hakkınızda hayırlısı...</p>
+    </div>
+    <%= link_to "BİR İTİRAFIM DAHA VAR", root_path, class: "success-btn" %>
+</div><!-- .wrapper -->

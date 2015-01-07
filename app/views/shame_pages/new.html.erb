@@ -1,18 +1,94 @@
-<div style="text-align:center">
-<h1>Utanma, söyle!</h1>
-<p>Birinden hoşlanıyor musun, nefret mi ediyorsun? Biri ter mi kokuyor? Yoksa yemek yerken ağzını mı şapırdatıyor? Haykırmak istiyorsun, ama utanıyor musun? Artık bunu yüzüne söylemenin bir yolu var...</p>
-<p><strong>Hem de tamamen anonim olarak!</strong></p>
-
-<div style="margin-top:50px;">
-  <%= form_for @choices, :url => shame_pages_create_path do |f| %>
-  <p><%= f.select :shame, options_for_select(["Senden hoşlanıyorum, hem de deli gibi", "Senden resmen nefret ediyorum", "Leş gibi ter kokuyorsun, söyleyemiyorum", "Ağzın kokuyor, yanında durmaya dayanamıyorum", "Bana borcunu ne zaman ödeyeceksin?", "O saç rengi sana yakışmış mi hiç?"]) %></p>
-  <p><%= f.select :choice, options_for_select(["Ekleyecek bir şeyim yok, bu ona yeter", "Five if you counted Vincente but he had lost his hand when a grenade", "German soldiers on the road and the idea was to aim at the first group"]) %></p>
-  <p><%= f.text_field :email, size: 35 %></p>
-  <p><%= f.submit "Gönder!" %></p>
-  <% end %>
-</div>
-  
-  <%= link_to(image_tag("1420547842940-ZMY8X473.jpg"), root_path) %>
-  
-  
-</div>
+<div class="wrapper content">
+    <h1>UTANMA, SÖYLE!</h1>
+    <h2>Birinden hoşlanıyor musun, nefret mi ediyorsun? Biri ter mi kokuyor?<br>Yoksa yemek yerken ağzını mı şapırdatıyor? Haykırmak istiyorsun, ama utanıyor musun?<br>Artık bunu yüzüne söylemenin bir yolu var...</h2>
+    <h3>Hem de tamamen anonim olarak!</h3>
+    <div class="concern-wrap">
+        <div class="info"></div>
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-love"></i>
+                </span>
+            </a>
+            <span class="concern-info">Hoşlanıyorum,<br>hem de deli gibi...</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-dislike"></i>
+                </span>
+            </a>
+            <span class="concern-info">Ondan resmen<br>nefret ediyorum!</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-sweating"></i>
+                </span>
+            </a>
+            <span class="concern-info">Ter kokuyor,<br>söyleyemiyorum!</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-breath"></i>
+                </span>
+            </a>
+            <span class="concern-info">Ağzı kokuyor,<br>dayanamıyorum!</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-debt"></i>
+                </span>
+            </a>
+            <span class="concern-info">Bana borcu var,<br>bir türlü ödemiyor!</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-hair"></i>
+                </span>
+            </a>
+            <span class="concern-info">O saç rengi<br>olmuş mu hiç?</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-smack"></i>
+                </span>
+            </a>
+            <span class="concern-info">Yemek yerken<br>ağzını şapırdatıyor!</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="flaticon-fat"></i>
+                </span>
+            </a>
+            <span class="concern-info">Son günlerde<br>çok kilo aldı</span>
+        </div><!-- .concern -->
+        <div class="concern">
+            <a class="concern-btn">
+                <span class="concern-btn-inner">
+                    <i class="something-else">?</i>
+                </span>
+            </a>
+            <span class="concern-info">Benim derdim<br>başka...</span>
+        </div><!-- .concern -->
+    </div><!-- .concern-wrap -->
+    <%= form_for @choices, :url => shame_pages_create_path, :html => {class: "mail-form"} do |f| %>
+        <input type="hidden" class="concern-id" name="choice[shame]">
+        <div class="sth-else">
+            <label for="sth-else">Derdini ona anlat...</label>
+            <textarea id="sth-else" name="choice[shame]" placeholder="Derdim şu ki..." disabled required maxlength="255" rel="tipsy" data-tooltip="Boş bırakamazsın!"></textarea>
+        </div>
+        <label for="add-text" class="add-text">Ekleyeceğin bir şey var mı?</label>
+        <input id="add-text" class="add-text" type="text" placeholder="Ekleyecek bir şeyim yok, bu ona yeter" maxlength="255" name="choice[choice]">
+        <label for="mail">Bu sözler kime gitsin?</label>
+        <input id="mail" name="choice[email]" type="email" placeholder="mail@mail.com" required maxlength="255" rel="tipsy" data-tooltip="E-mail alanı boş ya da e-mail yanlış!">
+        <p class="form-info">Sana ait hiçbir bilgiyi hiç kimseyle paylaşmayacağız, söz veriyoruz.</p>
+        <%= f.submit "Gönder!", class: "send-btn" %>
+    <% end %>
+    
+</div><!-- .wrapper -->
