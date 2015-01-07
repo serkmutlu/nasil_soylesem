@@ -5,7 +5,7 @@ class ShameMailer < ActionMailer::Base
     @email = email
     @shame = shame
     @choice = choice
-    mail(to: @email, subject: 'Bir arkadaşınızın size bir itirafı var')
+    mail(to: @email, subject: 'Bir arkadaşının sana bir itirafı var')
   end
   
 end
