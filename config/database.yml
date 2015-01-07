@@ -1,26 +1,23 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: appname-dev
+  host: 127.0.0.1
+  adapter: mysql2
+  encoding: utf8
+  database: dev-db
   pool: 5
-  host: localhost
-  username: action
-  password:
+  timeout: 5000
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: appname-test
+  host: 127.0.0.1
+  adapter: mysql2
+  encoding: utf8
+  database: test-db
   pool: 5
-  host: localhost
-  username: action
-  password:
+  timeout: 5000
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: appname-prod
+  host: 127.0.0.1
+  adapter: mysql2
+  encoding: utf8
+  database: prod-db
   pool: 5
-  host: localhost
-  username: action
-  password:
+  timeout: 5000
