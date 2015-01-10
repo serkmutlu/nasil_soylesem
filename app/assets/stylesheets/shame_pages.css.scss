@@ -43,7 +43,7 @@ html, body {
 }
 
 body {
-    background: url(/assets/bg.jpg) repeat;
+    background: url(asset-path('bg.jpg')) repeat;
     font-family: 'Fira Sans', sans-serif;
     font-weight: normal;
     line-height: 1.2;
@@ -145,7 +145,7 @@ h3 {
     top: -30px;
     width: 132px;
     height: 78px;
-    background: url(/assets/arrow_and_text.png) no-repeat;
+    background: url(asset-path('arrow_and_text.png')) no-repeat;
 }
 
 .concern {
@@ -306,7 +306,7 @@ button, .success-btn, .send-btn {
         height: 73px;
     }
     
-    .right-menu { display: none; }
+    .right-menu {  margin: 28px 10px; }
 
     h1 {
         margin-top: 40px;

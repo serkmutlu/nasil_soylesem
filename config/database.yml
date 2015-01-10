@@ -1,23 +1,29 @@
 development:
-  host: 127.0.0.1
+  host: localhost
   adapter: mysql2
   encoding: utf8
-  database: dev-db
+  database: rails-dev
+  username: root
+  password: <%= ENV['mysql_password'] %>
   pool: 5
   timeout: 5000
 
 test:
-  host: 127.0.0.1
+  host: localhost
   adapter: mysql2
   encoding: utf8
-  database: test-db
+  database: rails-test
+  username: root
+  password: <%= ENV['mysql_password'] %>
   pool: 5
   timeout: 5000
 
 production:
-  host: 127.0.0.1
+  host: localhost
   adapter: mysql2
   encoding: utf8
-  database: prod-db
-  pool: 5
+  database: rails-prod
+  username: root
+  password: <%= ENV['mysql_password'] %>
+  pool: 20
   timeout: 5000

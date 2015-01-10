@@ -81,12 +81,12 @@
         <input type="hidden" class="concern-id" name="choice[shame]">
         <div class="sth-else">
             <label for="sth-else">Derdini ona anlat...</label>
-            <textarea id="sth-else" name="choice[shame]" placeholder="Derdim şu ki..." disabled required maxlength="255" rel="tipsy" data-tooltip="Boş bırakamazsın!"></textarea>
+            <textarea id="sth-else" name="choice[shame]" placeholder="Derdim şu ki..." disabled required maxlength="255" rel="tipsy" data-tooltip="Derdini girmezsen olmaz"></textarea>
         </div>
         <label for="add-text" class="add-text">Ekleyeceğin bir şey var mı?</label>
         <input id="add-text" class="add-text" type="text" placeholder="Ekleyecek bir şeyim yok, bu ona yeter" maxlength="255" name="choice[choice]">
         <label for="mail">Bu sözler kime gitsin?</label>
-        <input id="mail" name="choice[email]" type="email" placeholder="mail@mail.com" required maxlength="255" rel="tipsy" data-tooltip="E-mail alanı boş ya da e-mail yanlış!">
+        <input id="mail" name="choice[email]" type="email" placeholder="mail@mail.com" required maxlength="255" rel="tipsy" data-tooltip="Buraya düzgün bir mail adresi girmelisin">
         <p class="form-info">Sana ait hiçbir bilgiyi hiç kimseyle paylaşmayacağız, söz veriyoruz.</p>
         <%= f.submit "Gönder!", class: "send-btn" %>
     <% end %>
